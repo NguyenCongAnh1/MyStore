@@ -1,0 +1,14 @@
+<div class="confirmation-container">
+  <div class="confirmation-items">
+    <h1 class="confirmation-header">
+      Success <span class="material-symbols-outlined"> celebration </span>
+    </h1>
+    <p>Thank you, <strong>{{ this.buyerFormConfirmation?.get("name")?.value }}</strong></p>
+    <p>Your {{ this.buyerFormConfirmation?.get("name")?.value }}</p>
+    <p>Your <strong>{{ totalPrice | currency : "USD" }} </strong> order is confirmed</p>
+    <p>Please allow 1-3 business day(s) for shipping</p>
+    <button type="submit" class="btn btn-primary" routerLink="/product">
+      Back to product list
+    </button>
+  </div>
+</div>

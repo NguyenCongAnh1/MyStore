@@ -1,0 +1,37 @@
+<ng-container *ngIf="productDetail">
+  <div class="detail-container">
+    <img [src]="productDetail.url" alt="{{ productDetail.name }}" />
+    <div class="detail-item">
+      <h1 class="detail-title">{{ productDetail.name }}</h1>
+      <p class="detail-text">{{ productDetail.price | currency }}</p>
+      <p>{{ productDetail.description }}</p>
+      <select
+        (ngModelChange)="onNumberChange(productDetail)"
+        [(ngModel)]="numberItem"
+        class="form-select select-input"
+        aria-label="Default select example"
+      >
+        <option
+          *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+          [value]="num"
+        >
+          {{ num }}
+        </option>
+      </select>
+      <button (click)="addToCart(productDetail)" class="btn btn-primary">
+        Add to cart
+      </button>
+      <div style="margin-top: 10px">
+        <a style="text-decoration: none" routerLink="/product">
+          <span
+            class="material-symbols-outlined"
+            style="vertical-align: middle"
+          >
+            arrow_back
+          </span>
+          Back to product list</a
+        >
+      </div>
+    </div>
+  </div>
+</ng-container>

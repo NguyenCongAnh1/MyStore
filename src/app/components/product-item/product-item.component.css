@@ -1,0 +1,30 @@
+.product-image {
+  list-style-type: none;
+  width: 290px;
+  padding: 20px;
+  margin: 6px 6px;
+  border: 1px solid #33b5e5;
+}
+
+
+.select-input {
+  width: 108px;
+  margin-bottom: 8px;
+}
+
+.product-index {
+  margin: 0px 50px 50px 50px;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 50px 64px 50px;
+}
+a {
+  text-decoration: none;
+}
+img {
+  cursor: pointer;
+}

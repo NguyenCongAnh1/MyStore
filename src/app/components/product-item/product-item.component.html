@@ -1,0 +1,35 @@
+<div class="product-container">
+  <div *ngFor="let product of productList" class="product-index">
+    <div
+      class="card"
+      style="width: 18rem; margin: auto 30px; text-align: center"
+    >
+      <img
+        [src]="product.url"
+        alt="{{ product.name }}"
+        routerLink="/product/{{ product.id }}"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text">{{ product.price | currency }}</p>
+        <select
+          (ngModelChange)="onNumberChange(product)"
+          [(ngModel)]="numberItem"
+          class="form-select"
+          aria-label="Default select example"
+          style="width: 100px; margin: 0px auto 20px"
+        >
+          <option
+            *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+            [value]="num"
+          >
+            {{ num }}
+          </option>
+        </select>
+        <button (click)="addToCart(product)" class="btn btn-primary">
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
