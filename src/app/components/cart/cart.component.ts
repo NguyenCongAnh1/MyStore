@@ -48,6 +48,7 @@ export class CartComponent implements OnInit {
     const index = this.cartItems.indexOf(product);
     this.cartItems.splice(index, 1);
     this.computeCartTotal();
+    alert("Remove product from cart !");
   }
 
   onSubmit() {
